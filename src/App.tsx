@@ -10,7 +10,7 @@ function App() {
     return (
         <Card>
             <Box width={'280px'} border={'15px'}>
-                
+            <img src="./assets/images/photo-of-desert.jpg" alt="desert" />
             </Box>
             <Title>Welcome to IT-INCUBATOR</Title>
         </Card>

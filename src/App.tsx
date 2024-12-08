@@ -25,10 +25,10 @@ function App() {
             <Box width={'280px'} border={'15px'} margin={'20px'}>
                 <Image src="./assets/images/photo-of-desert.jpg" alt="desert" />
             </Box>
-            <Box width={'70px'} margin={'20px'}>
+            <Box width={'70px'} >
                 <Title>Headline</Title>
             </Box>
-            <Box width={'260px'} margin={'20px'}>
+            <Box width={'260px'} margin={'10px'}>
                 <Paragraph>
                     Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit
                     molestie ornare in venen.
@@ -104,4 +104,8 @@ const Button = styled.button<StyledButtonPropsType>`
     font-wight: bold;
     color: ${(props) => props.color};
     background-color: ${(props) => props.background};
+    
+    &: hover {
+    cursor: pointer;
+    }
 `;

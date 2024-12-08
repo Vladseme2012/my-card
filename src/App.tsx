@@ -1,6 +1,7 @@
 import './App.css';
 import styled from 'styled-components';
 import { myTheme } from './styles/Theme.styled';
+import photo from './assets/images/desert.jpg';
 
 type StyledBoxPropsType = {
     width: string;
@@ -23,9 +24,9 @@ function App() {
     return (
         <Card>
             <Box width={'280px'} border={'15px'} margin={'20px'}>
-                <Image src="./assets/images/desert.jpg" alt="desert" />
+                <Image src={photo} alt="desert" />
             </Box>
-            <Box width={'70px'} >
+            <Box width={'70px'}>
                 <Title>Headline</Title>
             </Box>
             <Box width={'260px'} margin={'10px'}>
@@ -75,6 +76,9 @@ const Box = styled.div<StyledBoxPropsType>`
 `;
 
 const Image = styled.img<StyledImagePropsType>`
+width: 280px;
+height: 170px;
+object-fit: cover;
     src: ${(props) => props.src};
     alt: ${(props) => props.alt};
 `;
@@ -104,8 +108,8 @@ const Button = styled.button<StyledButtonPropsType>`
     font-wight: bold;
     color: ${(props) => props.color};
     background-color: ${(props) => props.background};
-    
+
     &: hover {
-    cursor: pointer;
+        cursor: pointer;
     }
 `;

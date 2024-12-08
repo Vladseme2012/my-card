@@ -23,7 +23,7 @@ function App() {
     return (
         <Card>
             <Box width={'280px'} border={'15px'} margin={'20px'}>
-                <Image src="./assets/images/photo-of-desert.jpg" alt="desert" />
+                <Image src="./assets/images/desert.jpg" alt="desert" />
             </Box>
             <Box width={'70px'} >
                 <Title>Headline</Title>

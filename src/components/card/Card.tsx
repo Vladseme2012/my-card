@@ -5,37 +5,31 @@ import { FlexWrapper } from '../flexWrapper/FlexWrapper';
 import { Box } from '../box/Box';
 
 type CardPropsType = {
-  src: string;
-  title: string;
-  text: string;
-  key: string;
-}
+    src: string;
+    title: string;
+    text: string;
+    key: string;
+};
 
 type StyledImagePropsType = {
-  src: string;
-  alt: string;
+    src: string;
+    alt: string;
 };
 
 type StyledButtonPropsType = {
-  color: string;
-  background: string;
+    color: string;
+    background: string;
 };
 
 export const Card = (props: CardPropsType) => {
-  return (
-    <FlexWrapper>
-      <StyledCard>
+    return (
+        <FlexWrapper>
+            <StyledCard>
                 <Box width={'280px'} margin={'0 0 20px'}>
                     <Image src={props.src} alt="desert" />
                 </Box>
-                <Box width={'70px'} padding={'0 0 0 10px'}>
-                    <Title>{props.title}</Title>
-                </Box>
-                <Box width={'260px'} margin={'20px 0'} padding={'0 0 0 10px'}>
-                    <Paragraph>
-                        {props.text}
-                    </Paragraph>
-                </Box>
+                <Title>{props.title}</Title>
+                <Paragraph>{props.text}</Paragraph>
                 <Box
                     width={'192px'}
                     margin={'0 0 20px'}
@@ -56,8 +50,8 @@ export const Card = (props: CardPropsType) => {
                     </Button>
                 </Box>
             </StyledCard>
-    </FlexWrapper>
-  );
+        </FlexWrapper>
+    );
 };
 
 const StyledCard = styled.article`
@@ -80,13 +74,18 @@ const Image = styled.img<StyledImagePropsType>`
 `;
 
 const Title = styled.h2`
+    padding: 0 0 0 10px;
     font-size: 16px;
     font-weight: 700;
-    text-align: center;
+    text-align: left;
     color: ${myTheme.colors.black};
 `;
 
 const Paragraph = styled.p`
+    display: flex;
+    width: 260px;
+    margin: 20px 0 20px 0;
+    padding: 0 0 0 10px;
     font-size: 12px;
     font-weight: 500;
     text-align: left;
@@ -109,4 +108,3 @@ const Button = styled.button<StyledButtonPropsType>`
         cursor: pointer;
     }
 `;
-
